@@ -1,4 +1,4 @@
-Algoritmo "fibonacci"
+Algoritmo "somafuncao"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Antonio Carlos Nicolodi 
 // Descrição   : Aqui você descreve o que o programa faz! (função)
@@ -6,28 +6,19 @@ Algoritmo "fibonacci"
 // Data atual  : 13/04/2026
 Var
 // Seção de Declarações das variáveis 
-   c, t1, t2, t3: inteiro
+   v1, v2, s: inteiro
    
-Funcao proximofibonacci(var a, b: inteiro): inteiro
-var
-c: inteiro
-Inicio
-      c := a + b
-      a := b
-      b := c
-      Retorne c
-FimFuncao
-
+Funcao soma(a, b: inteiro): inteiro
+inicio
+   Retorne (a + b)
+Fimfuncao
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   t1 <- 0
-   Escreva (t1)
-   t2 <- 1
-   Escreva (t2)
-   
-   Para c := 3 ate 5 faca
-      t3 <- proximofibonacci(t1, t2)
-      Escreva (t3)
-   FimPara
+   Escreva ("Digite o primeiro valor: ")
+   Leia (v1)
+   Escreva ("Digite o segundo valor: ")
+   Leia (v2)
+   s <- soma(v1, v2)
+   Escreva ("A soma entre", v1, " e", v2, " é igual a", s)
 
 Fimalgoritmo

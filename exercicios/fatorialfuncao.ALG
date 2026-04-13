@@ -1,4 +1,4 @@
-Algoritmo "fibonacci"
+Algoritmo "fatorialfuncao"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Antonio Carlos Nicolodi 
 // Descrição   : Aqui você descreve o que o programa faz! (função)
@@ -6,28 +6,27 @@ Algoritmo "fibonacci"
 // Data atual  : 13/04/2026
 Var
 // Seção de Declarações das variáveis 
-   c, t1, t2, t3: inteiro
+   n, f: inteiro
    
-Funcao proximofibonacci(var a, b: inteiro): inteiro
+Funcao fatorial(v: inteiro): inteiro
 var
-c: inteiro
+c, r: inteiro
+
 Inicio
-      c := a + b
-      a := b
-      b := c
-      Retorne c
+   r <- 1
+   
+   Para C <- 1 ate v faca
+      r <- r * c
+   FimPara
+   
+   Retorne r
 FimFuncao
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   t1 <- 0
-   Escreva (t1)
-   t2 <- 1
-   Escreva (t2)
-   
-   Para c := 3 ate 5 faca
-      t3 <- proximofibonacci(t1, t2)
-      Escreva (t3)
-   FimPara
+   Escreva ("Digite um número: ")
+   Leia (n)
+   f <- fatorial(n)
+   Escreva ("O valor de", n, "! é igual a", f)
 
 Fimalgoritmo

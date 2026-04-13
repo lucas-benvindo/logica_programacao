@@ -1,4 +1,4 @@
-Algoritmo "fibonacci"
+Algoritmo "parimpar"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Antonio Carlos Nicolodi 
 // Descrição   : Aqui você descreve o que o programa faz! (função)
@@ -6,28 +6,23 @@ Algoritmo "fibonacci"
 // Data atual  : 13/04/2026
 Var
 // Seção de Declarações das variáveis 
-   c, t1, t2, t3: inteiro
+   n: inteiro
+   r: caractere
    
-Funcao proximofibonacci(var a, b: inteiro): inteiro
-var
-c: inteiro
-Inicio
-      c := a + b
-      a := b
-      b := c
-      Retorne c
+Funcao parouimpar(v: inteiro): caractere
+inicio
+   Se (v % 2 = 0) entao
+      Retorne "PAR"
+   senao
+      Retorne "ÍMPAR"
+   FimSe
 FimFuncao
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   t1 <- 0
-   Escreva (t1)
-   t2 <- 1
-   Escreva (t2)
-   
-   Para c := 3 ate 5 faca
-      t3 <- proximofibonacci(t1, t2)
-      Escreva (t3)
-   FimPara
+   Escreva ("Digite um número: ")
+   Leia (n)
+   r <- parouimpar(n)
+   Escreva ("O número", n, " é um valor ", r)
 
 Fimalgoritmo
